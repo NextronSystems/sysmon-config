@@ -715,11 +715,15 @@
 			<TargetObject condition="contains">\Microsoft\Terminal Server Client\Servers\</TargetObject> <!-- MSTSC Connection History -->
 			<!--CLSID launch commands and Default File Association changes-->
 			<TargetObject name="T1042" condition="contains">\command\</TargetObject> <!--Windows: Sensitive sub-key under file associations and CLSID that map to launch command-->
-			<TargetObject name="T1122" condition="contains">\ddeexec\</TargetObject> <!--Windows: Sensitive sub-key under file associations and CLSID that map to launch command-->
-			<TargetObject name="T1122" condition="contains">{86C86720-42A0-1069-A2E8-08002B30309D}</TargetObject> <!--Windows: Tooltip handler-->
+			<TargetObject name="T1546.015" condition="contains">\ddeexec\</TargetObject> <!--Windows: Sensitive sub-key under file associations and CLSID that map to launch command-->
+			<TargetObject name="T1546.015" condition="contains">{86C86720-42A0-1069-A2E8-08002B30309D}</TargetObject> <!--Windows: Tooltip handler-->
 			<TargetObject name="T1042" condition="contains">exefile</TargetObject> <!--Windows Executable handler, to log any changes not already monitored-->
 			<!--Windows COM-->
-			<TargetObject name="T1122" condition="end with">\InprocServer32\(Default)</TargetObject> <!--Windows:COM Object Hijacking [ https://blog.gdatasoftware.com/2014/10/23941-com-object-hijacking-the-discreet-way-of-persistence ] | Credit @ion-storm -->
+			<TargetObject name="T1546.015" condition="end with">\InprocServer32\(Default)</TargetObject> <!--Windows:COM Object Hijacking [ https://blog.gdatasoftware.com/2014/10/23941-com-object-hijacking-the-discreet-way-of-persistence ] | Credit @ion-storm -->
+            <TargetObject name="T1546.015" condition="end with">\LocalServer32\(Default)</TargetObject> <!--https://learn.microsoft.com/en-us/windows/win32/com/localserver32-->
+			<TargetObject name="T1546.015" condition="end with">\TreatAs\(Default)</TargetObject> <!--https://www.youtube.com/watch?v=3gz1QmiMhss&t=1251s-->
+			<TargetObject name="T1546.015" condition="end with">\ScriptletURL\(Default)</TargetObject>
+            <TargetObject name="T1546.015" condition="end with">\Open\Command\DelegateExecute</TargetObject> <!--http://blog.sevagas.com/?Yet-another-sdclt-UAC-bypass-->
 			<!--Windows shell visual modifications used by malware-->
 			<TargetObject name="T1158" condition="end with">\Hidden</TargetObject> <!--Windows:Explorer: Some types of malware try to hide their hidden system files from the user, good signal event -->
 			<TargetObject name="T1158" condition="end with">\ShowSuperHidden</TargetObject> <!--Windows:Explorer: Some types of malware try to hide their hidden system files from the user, good signal event [ Example: https://www.symantec.com/security_response/writeup.jsp?docid=2007-061811-4341-99&tabid=2 ] -->
