@@ -917,6 +917,8 @@
 			<TargetObject condition="begin with">HKCR\iTunes.</TargetObject> <!--Apple: iTunes update noise-->
 			<!--WINEVT publishers noise-->
 			<TargetObject condition="is">HKLM\Software\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{945a8954-c147-4acd-923f-40c45405a658}</TargetObject> <!--Windows update-->
+			<!-- Services Noise -->
+			<TargetObject condition="contains">\CurrentVersion\NetworkList\Profiles\</TargetObject>
 		</RegistryEvent>
 	</RuleGroup>
 
