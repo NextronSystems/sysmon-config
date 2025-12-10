@@ -483,8 +483,8 @@
 			</Rule>
             <!--Suspicious Process Access of MsMpEng by WerFaultSecure - EDR-Freeze Ref: https://github.com/SigmaHQ/sigma/pull/5777/files#diff-070db4b0869c437f4aa265e9e01a3c48f5d1d9757be2aa6aec35b852a587bb73-->
             <Rule groupRelation="and">
-                <TargetImage condition="end with">\MsMpEng.exe</TargetImage>
                 <SourceImage condition="end with">\WerFaultSecure.exe</SourceImage>
+                <TargetImage condition="end with">\MsMpEng.exe</TargetImage>
             </Rule>
 		</ProcessAccess>
 	</RuleGroup>
