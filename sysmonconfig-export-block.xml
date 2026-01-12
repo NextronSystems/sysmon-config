@@ -807,6 +807,12 @@
 			<!--RunMRU and TypedPaths monitoring to detect potential clickfixing and filefixing attacks-->
 			<TargetObject condition="contains">\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\RunMRU\</TargetObject>
 			<TargetObject condition="contains">\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths\</TargetObject>
+            <!--Windows:HVCI: Monitor HypervisorEnforcedCodeIntegrity (HVCI) registry-->
+			<TargetObject name="HypervisorEnforcedCodeIntegrity" condition="end with">\Control\DeviceGuard\HypervisorEnforcedCodeIntegrity</TargetObject>
+			<TargetObject name="HypervisorEnforcedCodeIntegrity" condition="end with">\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity\Enabled</TargetObject>
+			<TargetObject name="HypervisorEnforcedCodeIntegrity" condition="end with">\Microsoft\Windows\DeviceGuard\HypervisorEnforcedCodeIntegrity</TargetObject>
+            <!--Vulnerable Driver Blocklist Enable-->
+			<TargetObject name="VulnerableDriverBlocklistEnable" condition="end with">\Control\CI\Config\VulnerableDriverBlocklistEnable</TargetObject>
 		</RegistryEvent>
 	</RuleGroup>
 
