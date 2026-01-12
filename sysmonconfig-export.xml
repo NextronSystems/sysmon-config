@@ -855,11 +855,11 @@
 			<TargetObject condition="begin with">HKLM\SYSTEM\CurrentControlSet\Enum\Root\LEGACY_</TargetObject> <!-- Often used by malware -->
 			<TargetObject condition="begin with">HKLM\SYSTEM\CurrentControlSet\Services\</TargetObject> <!--Windows Services -->
 			<!--Windows:HVCI: Monitor HVCI being disabled via registry-->
-			<TargetObject name="Tamper-HVCI" condition="end with">\Control\DeviceGuard\HypervisorEnforcedCodeIntegrity</TargetObject> 
-			<TargetObject name="Tamper-HVCI" condition="end with">\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity\Enabled</TargetObject> 
+			<TargetObject name="Tamper-HVCI" condition="end with">\Control\DeviceGuard\HypervisorEnforcedCodeIntegrity</TargetObject>
+			<TargetObject name="Tamper-HVCI" condition="end with">\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity\Enabled</TargetObject>
 			<TargetObject name="Tamper-HVCI" condition="end with">\Microsoft\Windows\DeviceGuard\HypervisorEnforcedCodeIntegrity</TargetObject>
             <!--Vulnerable Driver Blocklist Enable-->
-			<TargetObject name="VulnerableDriverBlocklistEnable" condition="end with">\Control\CI\Config\VulnerableDriverBlocklistEnable</TargetObject> 
+			<TargetObject name="VulnerableDriverBlocklistEnable" condition="end with">\Control\CI\Config\VulnerableDriverBlocklistEnable</TargetObject>
 		</RegistryEvent>
 	</RuleGroup>
 
