@@ -332,6 +332,7 @@
 			<Image condition="image">WindowsTerminal.exe</Image>
 			<Image condition="image">wt.exe</Image>
 			<Image condition="image">winlogon.exe</Image>
+			<Image condition="image">ssh.exe</Image>
 			<!--Live of the Land Binaries and scripts (LOLBAS) -->
 			<Image condition="image">bitsadmin.exe</Image> <!-- Windows: Background Intelligent Transfer Service - Can download from URLs -->
 			<Image condition="image">esentutl.exe</Image> <!-- Windows: Database utilities for the ESE - Can fetch from UNC paths -->
